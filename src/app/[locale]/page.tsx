@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeroBlock from "@/components/HeroBlock";
 import EventList from "@/components/EventList";
+import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 import { getUpcomingEvents, getTodayEvent } from "@/lib/events";
 
@@ -40,6 +41,7 @@ export default async function HomePage({
     <>
       <HeroBlock todayEvent={todayEvent} locale={locale} />
       <EventList events={upcoming.slice(0, 10)} locale={locale} />
+      <Gallery locale={locale} />
       <Footer locale={locale} />
     </>
   );
