@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 
 export async function generateMetadata({
   params,
@@ -45,6 +46,8 @@ const CONTENT = {
       size: "Velikost skupiny",
       message: "Zpráva",
       submit: "Odeslat poptávku",
+      success: "Poptávka odeslána — ozveme se co nejdříve.",
+      error: "Něco se pokazilo. Zkuste to prosím znovu.",
     },
     social: "Sociální sítě",
   },
@@ -76,6 +79,8 @@ const CONTENT = {
       size: "Group size",
       message: "Message",
       submit: "Send enquiry",
+      success: "Enquiry sent — we'll get back to you shortly.",
+      error: "Something went wrong. Please try again.",
     },
     social: "Social",
   },
@@ -164,78 +169,7 @@ export default async function ContactPage({
               <p className="text-xs text-zinc-500 tracking-[0.3em] uppercase mb-3">{c.privateLabel}</p>
               <p className="text-sm text-zinc-400 leading-relaxed mb-8">{c.privateDesc}</p>
 
-              {/* [DRAFT — napojit na backend / email provider] */}
-              <form
-                action={`mailto:info@club-garage-prag.cz?subject=${encodeURIComponent(c.privateLabel)}`}
-                method="post"
-                encType="text/plain"
-                className="space-y-4"
-              >
-                <div>
-                  <label className="block text-xs text-zinc-500 tracking-widest uppercase mb-1.5">
-                    {c.form.name}
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-100 px-4 py-2.5 text-sm placeholder:text-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs text-zinc-500 tracking-widest uppercase mb-1.5">
-                    {c.form.email}
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-100 px-4 py-2.5 text-sm placeholder:text-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors"
-                  />
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs text-zinc-500 tracking-widest uppercase mb-1.5">
-                      {c.form.date}
-                    </label>
-                    <input
-                      type="text"
-                      name="date"
-                      className="w-full bg-zinc-900 border border-zinc-800 text-zinc-100 px-4 py-2.5 text-sm placeholder:text-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs text-zinc-500 tracking-widest uppercase mb-1.5">
-                      {c.form.size}
-                    </label>
-                    <input
-                      type="text"
-                      name="size"
-                      className="w-full bg-zinc-900 border border-zinc-800 text-zinc-100 px-4 py-2.5 text-sm placeholder:text-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs text-zinc-500 tracking-widest uppercase mb-1.5">
-                    {c.form.message}
-                  </label>
-                  <textarea
-                    name="message"
-                    rows={5}
-                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-100 px-4 py-2.5 text-sm placeholder:text-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-accent hover:bg-accent-dark text-white text-xs font-medium tracking-widest uppercase py-4 transition-colors"
-                >
-                  {c.form.submit}
-                </button>
-              </form>
+              <ContactForm labels={c.form} />
             </div>
           </div>
         </div>
