@@ -38,14 +38,14 @@ export default function Nav({ locale }: NavProps) {
             <Link
               key={l.href}
               href={l.href}
-              className="text-xs text-zinc-500 hover:text-zinc-100 tracking-widest uppercase transition-colors"
+              className="text-xs text-zinc-300 hover:text-white tracking-widest uppercase transition-colors"
             >
               {l.label}
             </Link>
           ))}
           <Link
             href={`/${alt}`}
-            className="text-xs text-zinc-600 hover:text-zinc-300 tracking-widest uppercase border border-zinc-800 hover:border-zinc-600 px-2.5 py-1 transition-colors"
+            className="text-xs text-zinc-300 hover:text-white tracking-widest uppercase border border-zinc-500 hover:border-zinc-300 px-2.5 py-1 transition-colors"
           >
             {alt.toUpperCase()}
           </Link>

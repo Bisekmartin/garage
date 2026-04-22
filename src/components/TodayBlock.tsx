@@ -22,7 +22,7 @@ export default function TodayBlock({ event, locale }: Props) {
       {event ? (
         <>
           <h2 className="text-2xl md:text-3xl font-bold leading-tight">{title}</h2>
-          <p className="text-zinc-400 text-sm mt-1 tabular-nums">
+          <p className="text-zinc-300 text-sm mt-1 tabular-nums">
             {event.start_time} — {event.end_time}
           </p>
           <div className="mt-3">

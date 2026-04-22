@@ -33,7 +33,7 @@ export default function HeroBlock({ todayEvent, locale }: Props) {
 
       {/* Content */}
       <div className="relative z-10 px-6 pb-16 md:px-12 md:pb-24 max-w-3xl">
-        <p className="text-xs text-zinc-500 tracking-[0.35em] uppercase mb-6">
+        <p className="text-xs text-zinc-300 tracking-[0.35em] uppercase mb-6 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
           Balbínova 3, Praha 2&nbsp;&nbsp;·&nbsp;&nbsp;Men only&nbsp;&nbsp;·&nbsp;&nbsp;18+
         </p>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none mb-12 whitespace-pre-line">

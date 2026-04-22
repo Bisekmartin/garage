@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ResolvedEvent } from "@/types/event";
 import DressCodeBadge from "./DressCodeBadge";
 import PartnerCredit from "./PartnerCredit";
@@ -28,27 +29,31 @@ export default function EventCard({ event, locale }: Props) {
         : "Free"
       : `${event.price.amount} ${event.price.currency}`;
 
+  const eventPath = `/${locale}/events/${event.slug}`;
+
   return (
-    <article className="border-b border-zinc-900 py-5">
+    <article className="border-b border-zinc-900 py-5 group">
       <div className="flex gap-5 md:gap-8">
         {/* Date column */}
         <div className="w-12 md:w-14 shrink-0 text-center pt-0.5">
-          <p className="text-xs text-zinc-600 uppercase tracking-widest">{dayLabel}</p>
+          <p className="text-xs text-zinc-400 uppercase tracking-widest">{dayLabel}</p>
           <p className="text-2xl font-bold tabular-nums leading-tight mt-0.5">{day}</p>
-          <p className="text-xs text-zinc-600 uppercase tracking-widest mt-0.5">{monthLabel}</p>
+          <p className="text-xs text-zinc-400 uppercase tracking-widest mt-0.5">{monthLabel}</p>
         </div>
 
         {/* Info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-4 flex-wrap">
             <div>
+              <Link href={eventPath}>
               <h3
-                className={`font-bold text-base md:text-lg leading-tight ${
+                className={`font-bold text-base md:text-lg leading-tight group-hover:text-accent transition-colors ${
                   event.type === "themed" ? "text-accent" : ""
                 }`}
               >
                 {title}
               </h3>
+              </Link>
               <p className="text-zinc-500 text-sm mt-0.5 tabular-nums">
                 {event.start_time} — {event.end_time}
               </p>

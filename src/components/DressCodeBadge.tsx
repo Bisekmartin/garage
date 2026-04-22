@@ -6,7 +6,7 @@ const LABELS: Record<string, Record<string, string>> = {
 };
 
 const STYLES: Record<string, string> = {
-  none: "text-zinc-600",
+  none: "text-zinc-400",
   suggested: "text-zinc-400 border border-zinc-700 px-2 py-0.5",
   strict: "text-accent border border-accent/50 px-2 py-0.5",
 };

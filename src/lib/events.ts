@@ -71,3 +71,26 @@ export function getUpcomingEvents(from: Date, days: number): ResolvedEvent[] {
 export function getTodayEvent(now: Date): ResolvedEvent | null {
   return getUpcomingEvents(now, 1)[0] ?? null;
 }
+
+export function getEventDefinitionBySlug(slug: string): EventDefinition | null {
+  return loadDefinitions().find((e) => e.slug === slug) ?? null;
+}
+
+export function getNextDatesForSlug(slug: string, from: Date, count: number): string[] {
+  const events = getUpcomingEvents(from, 120);
+  return events
+    .filter((e) => e.slug === slug)
+    .slice(0, count)
+    .map((e) => e.date);
+}
+
+export function getAllEventsByMonth(from: Date, days: number): Record<string, ResolvedEvent[]> {
+  const events = getUpcomingEvents(from, days);
+  const grouped: Record<string, ResolvedEvent[]> = {};
+  for (const event of events) {
+    const month = event.date.slice(0, 7); // YYYY-MM
+    if (!grouped[month]) grouped[month] = [];
+    grouped[month].push(event);
+  }
+  return grouped;
+}
