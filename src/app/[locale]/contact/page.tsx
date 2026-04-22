@@ -160,7 +160,7 @@ export default async function ContactPage({
             </div>
 
             {/* Right column — private event form */}
-            <div>
+            <div id="private-event">
               <p className="text-xs text-zinc-500 tracking-[0.3em] uppercase mb-3">{c.privateLabel}</p>
               <p className="text-sm text-zinc-400 leading-relaxed mb-8">{c.privateDesc}</p>
 

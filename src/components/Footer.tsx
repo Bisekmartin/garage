@@ -49,7 +49,7 @@ export default function Footer({ locale }: Props) {
           {/* Private event */}
           <div>
             <a
-              href={`mailto:info@club-garage-prag.cz?subject=${encodeURIComponent(c.privateEvent)}`}
+              href={`/${locale}/contact#private-event`}
               className="text-xs text-zinc-500 hover:text-zinc-100 tracking-widest uppercase transition-colors"
             >
               {c.privateEvent}
