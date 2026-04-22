@@ -148,20 +148,12 @@ export default async function ContactPage({
                 <p className="text-xs text-zinc-500 tracking-[0.3em] uppercase mb-3">{c.social}</p>
                 <div className="flex gap-6">
                   <a
-                    href="https://www.instagram.com/clubgarageprag/"
+                    href="https://www.instagram.com/club_garageprague/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-zinc-400 hover:text-white transition-colors"
                   >
                     Instagram
-                  </a>
-                  <a
-                    href="https://www.facebook.com/clubgarageprag"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-zinc-400 hover:text-white transition-colors"
-                  >
-                    Facebook
                   </a>
                 </div>
               </div>

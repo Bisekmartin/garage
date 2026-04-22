@@ -57,10 +57,7 @@ export default async function HomePage({
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "21:00", closes: "06:00" },
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "21:00", closes: "06:00" },
     ],
-    sameAs: [
-      "https://www.instagram.com/clubgarageprag/",
-      "https://www.facebook.com/clubgarageprag",
-    ],
+    sameAs: ["https://www.instagram.com/club_garageprague/"],
   };
 
   return (

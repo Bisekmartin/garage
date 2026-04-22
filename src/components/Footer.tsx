@@ -37,20 +37,12 @@ export default function Footer({ locale }: Props) {
           {/* Socials */}
           <div className="flex flex-col gap-3">
             <a
-              href="https://www.instagram.com/clubgarageprag/"
+              href="https://www.instagram.com/club_garageprague/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-zinc-500 hover:text-zinc-100 tracking-widest uppercase transition-colors"
             >
               Instagram
-            </a>
-            <a
-              href="https://www.facebook.com/clubgarageprag"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-zinc-500 hover:text-zinc-100 tracking-widest uppercase transition-colors"
-            >
-              Facebook
             </a>
           </div>
 
