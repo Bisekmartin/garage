@@ -62,7 +62,7 @@ export default function Footer({ locale }: Props) {
           <p className="text-xs text-zinc-700">
             {c.legal} © {year}
             {process.env.NEXT_PUBLIC_APP_VERSION && (
-              <span className="ml-3 text-zinc-800">v{process.env.NEXT_PUBLIC_APP_VERSION}</span>
+              <span className="ml-3 text-zinc-700">v{process.env.NEXT_PUBLIC_APP_VERSION}</span>
             )}
           </p>
           <a
