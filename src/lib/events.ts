@@ -84,6 +84,10 @@ export function getNextDatesForSlug(slug: string, from: Date, count: number): st
     .map((e) => e.date);
 }
 
+export function getAllEventSlugs(): string[] {
+  return [...new Set(loadDefinitions().map((e) => e.slug))];
+}
+
 export function getAllEventsByMonth(from: Date, days: number): Record<string, ResolvedEvent[]> {
   const events = getUpcomingEvents(from, days);
   const grouped: Record<string, ResolvedEvent[]> = {};

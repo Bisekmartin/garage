@@ -6,6 +6,7 @@ import { getEventDefinitionBySlug, getNextDatesForSlug } from "@/lib/events";
 import DressCodeBadge from "@/components/DressCodeBadge";
 import PartnerCredit from "@/components/PartnerCredit";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 
 export async function generateMetadata({
   params,
@@ -99,8 +100,41 @@ export default async function EventDetailPage({
 
   const heroImage = event.poster ?? "/images/event-fallback/bar.jpg";
 
+  const eventLdItems = upcomingDates.map((dateStr) => ({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: title,
+    description: description ?? undefined,
+    startDate: `${dateStr}T${event.start_time}:00`,
+    endDate: `${dateStr}T${event.end_time}:00`,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: "Club Garage Praha",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Balbínova 224/3",
+        addressLocality: "Praha 2",
+        addressCountry: "CZ",
+      },
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "Club Garage Praha",
+      url: "https://club-garage-prag.cz",
+    },
+    offers: {
+      "@type": "Offer",
+      price: event.price.amount,
+      priceCurrency: event.price.currency,
+      availability: "https://schema.org/InStock",
+    },
+  }));
+
   return (
     <>
+      {eventLdItems.map((ld, i) => <JsonLd key={i} data={ld} />)}
       {/* Hero */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
