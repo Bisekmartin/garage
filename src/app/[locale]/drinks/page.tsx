@@ -140,17 +140,17 @@ export default async function DrinksPage({
   return (
     <>
       <main className="pt-28 pb-16 px-6 md:px-12 min-h-screen">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">{c.heading}</h1>
-          <p className="text-xs text-zinc-500 tracking-widest uppercase mb-14">{c.note}</p>
+          <p className="text-xs text-zinc-500 tracking-widest uppercase mb-10">{c.note}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="divide-y divide-zinc-900">
             {c.categories.map((cat) => (
-              <div key={cat.label}>
-                <p className="text-xs text-zinc-500 tracking-[0.3em] uppercase mb-4">{cat.label}</p>
-                <div className="space-y-2">
+              <div key={cat.label} className="py-8">
+                <p className="text-xs text-zinc-500 tracking-[0.3em] uppercase mb-5">{cat.label}</p>
+                <div className="space-y-3">
                   {cat.items.map((item) => (
-                    <div key={item.name} className="flex justify-between gap-6 text-sm">
+                    <div key={item.name} className="flex justify-between gap-8 text-sm">
                       <span className="text-zinc-300">{item.name}</span>
                       <span className="text-zinc-100 tabular-nums shrink-0">{item.price}</span>
                     </div>

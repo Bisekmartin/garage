@@ -143,18 +143,6 @@ export default async function ContactPage({
                 </div>
               </div>
 
-              {/* Map */}
-              <div className="border border-zinc-900 overflow-hidden">
-                <iframe
-                  title="Club Garage Praha — mapa"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=14.4295%2C50.0720%2C14.4395%2C50.0770&layer=mapnik&marker=50.07454%2C14.43445"
-                  width="100%"
-                  height="220"
-                  style={{ filter: "invert(90%) hue-rotate(180deg)", border: 0 }}
-                  loading="lazy"
-                />
-              </div>
-
               {/* Social */}
               <div>
                 <p className="text-xs text-zinc-500 tracking-[0.3em] uppercase mb-3">{c.social}</p>

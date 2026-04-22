@@ -50,12 +50,6 @@ export default async function EventsPage({
   };
   const t = TITLES[locale] ?? TITLES.en;
 
-  const NEWSLETTER: Record<string, Record<string, string>> = {
-    cs: { heading: "Newsletter", sub: "Nové akce, žádný spam.", placeholder: "váš@email.cz", btn: "→" },
-    en: { heading: "Newsletter", sub: "New events, no spam.", placeholder: "your@email.com", btn: "→" },
-  };
-  const nl = NEWSLETTER[locale] ?? NEWSLETTER.en;
-
   return (
     <>
       <main className="pt-28 pb-16 px-6 md:px-12 min-h-screen">
@@ -77,25 +71,6 @@ export default async function EventsPage({
             </div>
           )}
 
-          {/* Newsletter */}
-          <div className="mt-20 border-t border-zinc-900 pt-12">
-            <p className="text-xs text-zinc-500 tracking-[0.3em] uppercase mb-1">{nl.heading}</p>
-            <p className="text-zinc-300 mb-6">{nl.sub}</p>
-            {/* [DRAFT — napojit na backend / email provider] */}
-            <form className="flex gap-3 max-w-sm">
-              <input
-                type="email"
-                placeholder={nl.placeholder}
-                className="flex-1 bg-zinc-900 border border-zinc-800 text-zinc-100 px-4 py-2.5 text-sm placeholder:text-zinc-600 focus:outline-none focus:border-zinc-600"
-              />
-              <button
-                type="submit"
-                className="bg-accent hover:bg-accent-dark text-white px-5 py-2.5 text-sm font-medium transition-colors"
-              >
-                {nl.btn}
-              </button>
-            </form>
-          </div>
         </div>
       </main>
       <Footer locale={locale} />
