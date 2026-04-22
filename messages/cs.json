@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "events": "Akce",
+    "drinks": "Nápoje",
+    "contact": "Kontakt",
+    "about": "O nás",
+    "toggleMenu": "Otevřít menu"
+  },
+  "agegate": {
+    "location": "Praha 2",
+    "tagline": "Vstup pouze pro dospělé",
+    "subtitle": "Tento web je určen výhradně mužům starším 18 let.",
+    "confirm": "Vstoupit",
+    "deny": "Odejít"
+  },
+  "events": {
+    "title": "Nadcházející akce",
+    "partner": "Pořádá",
+    "presale": "Předprodej →",
+    "free": "Zdarma",
+    "noEvents": "Žádné nadcházející akce"
+  },
+  "dresscode": {
+    "none": "Bez dress codu",
+    "suggested": "Doporučeno",
+    "strict": "Povinné"
+  },
+  "footer": {
+    "address": "Balbínova 224/3, Praha 2",
+    "hours": "St–So",
+    "privateEvent": "Poptávka privátní akce",
+    "privacy": "Ochrana osobních údajů",
+    "legal": "HAPES s.r.o."
+  }
+}

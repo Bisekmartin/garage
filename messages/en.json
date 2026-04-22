@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "events": "Events",
+    "drinks": "Drinks",
+    "contact": "Contact",
+    "about": "About",
+    "toggleMenu": "Toggle menu"
+  },
+  "agegate": {
+    "location": "Prague 2",
+    "tagline": "Adults only",
+    "subtitle": "This site is intended exclusively for men aged 18 and over.",
+    "confirm": "Enter",
+    "deny": "Leave"
+  },
+  "events": {
+    "title": "Upcoming events",
+    "partner": "Hosted by",
+    "presale": "Presale →",
+    "free": "Free",
+    "noEvents": "No upcoming events"
+  },
+  "dresscode": {
+    "none": "No dress code",
+    "suggested": "Recommended",
+    "strict": "Required"
+  },
+  "footer": {
+    "address": "Balbínova 224/3, Prague 2",
+    "hours": "Wed–Sat",
+    "privateEvent": "Private event enquiry",
+    "privacy": "Privacy policy",
+    "legal": "HAPES s.r.o."
+  }
+}

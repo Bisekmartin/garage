@@ -1,0 +1,8 @@
+{
+  "schedule": [
+    { "day": "wed", "label_cs": "Středa", "label_en": "Wednesday", "open": "19:00", "close": "03:00" },
+    { "day": "thu", "label_cs": "Čtvrtek", "label_en": "Thursday",  "open": "21:00", "close": "05:00" },
+    { "day": "fri", "label_cs": "Pátek",   "label_en": "Friday",    "open": "21:00", "close": "06:00" },
+    { "day": "sat", "label_cs": "Sobota",  "label_en": "Saturday",  "open": "21:00", "close": "06:00" }
+  ]
+}
