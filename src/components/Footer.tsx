@@ -61,6 +61,9 @@ export default function Footer({ locale }: Props) {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 pt-6 border-t border-zinc-900">
           <p className="text-xs text-zinc-700">
             {c.legal} © {year}
+            {process.env.NEXT_PUBLIC_APP_VERSION && (
+              <span className="ml-3 text-zinc-800">v{process.env.NEXT_PUBLIC_APP_VERSION}</span>
+            )}
           </p>
           <a
             href={`/${locale}/privacy`}
