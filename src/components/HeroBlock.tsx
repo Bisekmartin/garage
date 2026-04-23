@@ -20,8 +20,8 @@ export default function HeroBlock({ todayEvent, locale }: Props) {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero/interior-wide.jpg"
-          alt="Dark industrial bar interior with warm amber lighting and rows of bottles"
+          src="/images/hero/herofoto.jpg"
+          alt="Club Garage bar interior with red neon sign and dark industrial atmosphere"
           fill
           priority
           className="object-cover object-center"
